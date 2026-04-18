@@ -1306,70 +1306,41 @@ footer{background:#0F0A06;padding:5rem 3.5rem 2.5rem}
 <div class="fu" style="transition-delay:.14s">
 
   <div class="cform">
-
-    <div class="cform-title">Send an enrollment request</div>
-
-    <form action="https://formspree.io/f/xojydzda" method="POST">
-
-      <div class="frow">
-        <div class="fg">
-          <label for="parent_name">Parent's name *</label>
-          <input type="text" id="parent_name" name="parent_name" placeholder="Your full name" required>
-        </div>
-
-        <div class="fg">
-          <label for="phone">Phone *</label>
-          <input type="tel" id="phone" name="phone" placeholder="+880 17..." required>
-        </div>
-      </div>
-
-      <div class="fg">
-        <label for="email">Email address</label>
-        <input type="email" id="email" name="email" placeholder="your@email.com">
-      </div>
-
-      <div class="frow">
-        <div class="fg">
-          <label for="child_name">Child's name *</label>
-          <input type="text" id="child_name" name="child_name" placeholder="Child's full name" required>
-        </div>
-
-        <div class="fg">
-          <label for="child_age">Child's age *</label>
-          <input type="number" id="child_age" name="child_age" placeholder="Age" min="3" max="18" required>
-        </div>
-      </div>
-
-      <div class="fg">
-        <label for="subject">Subject interested in *</label>
-        <select id="subject" name="subject" required>
-          <option value="">Select a subject...</option>
-          <option value="Drawing & Painting">Drawing & Painting — ৳1,000/mo</option>
-          <option value="Song & Vocals">Song & Vocals — ৳1,000/mo</option>
-          <option value="Dance">Dance — ৳1,000/mo</option>
-          <option value="Guitar, Violin & Instruments">Guitar, Violin & Instruments — ৳1,000/mo</option>
-          <option value="Clay Works">Clay Works — ৳1,000/mo</option>
-          <option value="Arts & Crafts">Arts & Crafts — ৳1,000/mo</option>
-          <option value="Terracotta Design">Terracotta Design — ৳5,000/mo</option>
-          <option value="Handwriting">Handwriting — ৳800/mo</option>
-          <option value="Recitation & Presentation">Recitation & Presentation — ৳1,000/mo</option>
-          <option value="Multiple subjects">Multiple subjects</option>
-        </select>
-      </div>
-
-      <div class="fg">
-        <label for="message">Message (optional)</label>
-        <textarea id="message" name="message" placeholder="Any questions or special requirements..."></textarea>
-      </div>
-
-      <button type="submit" class="fsubmit">
-        Send Enrollment Request →
-      </button>
-
-    </form>
-
+  <div class="cform-title">Send an enrollment request</div>
+  <div id="formContent">
+    <div class="frow">
+      <div class="fg"><label>Parent's name *</label><input type="text" id="pname" placeholder="Your full name"/></div>
+      <div class="fg"><label>Phone *</label><input type="tel" id="pphone" placeholder="+880 17..."/></div>
+    </div>
+    <div class="fg"><label>Email address</label><input type="email" id="pemail" placeholder="your@email.com"/></div>
+    <div class="frow">
+      <div class="fg"><label>Child's name *</label><input type="text" id="cname" placeholder="Child's full name"/></div>
+      <div class="fg"><label>Child's age *</label><input type="number" id="cage" placeholder="Age" min="3" max="18"/></div>
+    </div>
+    <div class="fg">
+      <label>Subject interested in *</label>
+      <select id="subj">
+        <option value="">Select a subject...</option>
+        <option>Drawing & Painting — ৳1,000/mo</option>
+        <option>Song & Vocals — ৳1,000/mo</option>
+        <option>Dance — ৳1,000/mo</option>
+        <option>Guitar, Violin & Instruments — ৳1,000/mo</option>
+        <option>Clay Works — ৳1,000/mo</option>
+        <option>Arts & Crafts — ৳1,000/mo</option>
+        <option>Terracotta Design — ৳5,000/mo</option>
+        <option>Handwriting — ৳800/mo</option>
+        <option>Recitation & Presentation — ৳1,000/mo</option>
+        <option>Multiple subjects</option>
+      </select>
+    </div>
+    <div class="fg"><label>Message (optional)</label><textarea id="msg" placeholder="Any questions or special requirements..."></textarea></div>
+    <button class="fsubmit" onclick="submitForm()">Send Enrollment Request →</button>
   </div>
-
+  <div class="fsuccess" id="fsuccess">
+    <div class="fe">🎉</div>
+    <h3>Message sent!</h3>
+    <p>Thank you for your interest in Rangon Academy.<br>We'll contact you within 24 hours to confirm enrollment.</p>
+  </div>
 </div>
 </section>
 
