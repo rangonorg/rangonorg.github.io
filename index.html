@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Rangon | রঙন সাংস্কৃতিক শিক্ষালয় — Uttara, Dhaka</title>
 <meta name="description" content="Rangon is a creative educational institute in Uttara, Dhaka. Art, music, dance, guitar, violin, clay works, terracotta and more. Est. 2013.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Outfit:wght@300;400;500;600;700&family=Noto+Serif+Bengali:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{
@@ -1324,7 +1324,9 @@ footer{background:#0F0A06;padding:5rem 3.5rem 2.5rem}
             width="100%"
             height="350"
             style="border:0;"
-            loading="lazy">
+            loading="lazy"
+            allowfullscreen
+            referrerpolicy="no-referrer-when-downgrade">
           </iframe>
         </div>
 
@@ -1544,14 +1546,7 @@ function filterCourses(cat,btn){
 // Toast
 function toast(msg){var t=document.getElementById("toast");t.textContent=msg;t.classList.add("show");setTimeout(function(){t.classList.remove("show")},3500)}
 
-// Form submit
-{
-  var pn=document.getElementById("pname").value.trim(),ph=document.getElementById("pphone").value.trim(),cn=document.getElementById("cname").value.trim(),ca=document.getElementById("cage").value.trim(),sj=document.getElementById("subj").value;
-  if(!pn||!ph||!cn||!ca||!sj){toast("⚠️ Please fill in all required fields.");return;}
-  document.getElementById("formContent").style.display="none";
-  document.getElementById("fsuccess").style.display="block";
-  toast("✅ Enrollment request sent!");
-}
+// Form submit is handled by Formspree (native HTML form action)
 </script>
 </body>
 </html>
